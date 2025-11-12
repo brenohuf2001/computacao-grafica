@@ -1,0 +1,80 @@
+1. Como o olho humano percebe as cores e a função dos cones
+
+O olho humano percebe as cores por meio de células fotorreceptoras localizadas na retina: bastonetes e cones.
+
+Os bastonetes são responsáveis pela visão em ambientes com pouca luz (preto, branco e tons de cinza).
+
+Os cones são responsáveis pela percepção das cores e funcionam melhor sob luz intensa.
+
+Existem três tipos de cones, cada um sensível a uma faixa de comprimento de onda específica:
+
+Cones S (Short) – sensíveis ao azul (~420 nm)
+
+Cones M (Medium) – sensíveis ao verde (~534 nm)
+
+Cones L (Long) – sensíveis ao vermelho (~564 nm)
+
+A combinação da ativação desses cones em diferentes intensidades gera a percepção de todas as cores visíveis. Por exemplo, a ativação simultânea dos cones L e M resulta na percepção da cor amarela.
+
+
+3. Diferença entre o modelo RGB e o modelo CMYK (com exemplos de aplicação)
+
+O modelo RGB (Red, Green, Blue) é um sistema de cores aditivas, ou seja, as cores são formadas pela adição de luz. Ele é utilizado principalmente em dispositivos que emitem luz, como telas de computadores, televisores, câmeras digitais e celulares. Nesse modelo, quando as três cores primárias (vermelho, verde e azul) são combinadas em intensidade máxima, o resultado é a cor branca.
+
+Já o modelo CMYK (Cyan, Magenta, Yellow, Key/Black) é um sistema de cores subtrativas, onde as cores são criadas pela subtração de luz refletida. Ele é utilizado em impressoras e materiais gráficos, pois trabalha com pigmentos que absorvem determinadas faixas de luz. Quando as três cores principais (ciano, magenta e amarelo) são misturadas, o resultado tende ao preto, que é complementado pela adição da tinta preta (Key).
+
+Em resumo, o modelo RGB é usado para exibição digital, enquanto o CMYK é usado para impressão física. Por exemplo, uma imagem exibida em um monitor utiliza RGB, mas, ao ser impressa em papel, é convertida para CMYK para reproduzir corretamente as cores.el.
+
+
+4. Conceito de cor aditiva e subtrativa (com exemplos práticos)
+
+Cor Aditiva:
+Ocorre quando as cores são formadas pela adição de luz. A mistura das três luzes primárias (vermelho, verde e azul) resulta em branco.
+
+Exemplo: Telas de TV, monitores, painéis de LED.
+
+Cor Subtrativa:
+Ocorre quando as cores são formadas pela absorção (subtração) de luz refletida. A combinação das tintas primárias (ciano, magenta e amarelo) produz preto.
+
+Exemplo: Impressão em papel, pintura com pigmentos.
+
+6.2 Aplicação Prática (Python e Notebook)
+Tema: Espaços de cores em imagens de satélite
+
+No sensoriamento remoto, as imagens captadas por satélites são analisadas em diferentes espaços de cores para realçar informações sobre o solo, a vegetação e corpos d’água.
+
+Dois espaços de cores comuns são:
+
+RGB (Red, Green, Blue) – usado para visualização natural de imagens.
+
+HSV (Hue, Saturation, Value) ou NDVI (índice derivado) – usado para destacar características específicas, como vegetação.
+
+A seguir, um exemplo prático em Python usando OpenCV e Matplotlib:
+
+Código Exemplo (Visualização de Espaços de Cores)
+# Importação das bibliotecas
+import cv2
+import matplotlib.pyplot as plt
+
+# Leitura de uma imagem de satélite (exemplo genérico)
+# Você pode substituir 'satellite.jpg' por qualquer imagem de satélite real
+img = cv2.imread('satellite.jpg')
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+# Conversão para o espaço de cor HSV
+img_hsv = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2HSV)
+
+# Exibição comparativa
+plt.figure(figsize=(12, 6))
+
+plt.subplot(1, 2, 1)
+plt.imshow(img_rgb)
+plt.title('Espaço de Cor RGB (Visual Natural)')
+plt.axis('off')
+
+plt.subplot(1, 2, 2)
+plt.imshow(img_hsv)
+plt.title('Espaço de Cor HSV (Realce de Características)')
+plt.axis('off')
+
+plt.show()
