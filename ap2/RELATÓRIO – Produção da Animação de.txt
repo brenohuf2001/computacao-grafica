@@ -1,0 +1,86 @@
+RELATÓRIO – Produção da Animação de um Carro em Linha Reta sobre uma Ponte no Blender
+1. Introdução
+
+Este relatório descreve o processo de produção de uma animação tridimensional realizada no software Blender, cujo objetivo foi animar um carro deslocando-se em linha reta sobre uma ponte. O trabalho envolveu modelagem simples, organização da cena, configuração dos materiais, iluminação, animação da trajetória e renderização final.
+
+2. Preparação da Cena
+2.1 Importação e organização dos modelos
+
+O primeiro passo foi importar ou criar o modelo 3D do carro.
+
+Em seguida, foi criada uma ponte simples, composta por uma superfície plana elevada e alguns detalhes laterais.
+
+Os objetos foram organizados em coleções específicas (“Carro”, “Ponte”, “Cenário”) para facilitar o fluxo de trabalho.
+
+2.2 Ajustes de escala e posição
+
+Foi realizada a correção de escala de todos os elementos para garantir proporções realistas.
+
+O carro foi posicionado no início da ponte, alinhado ao eixo central, garantindo que sua trajetória fosse reta.
+
+3. Configuração dos Materiais e Texturas
+3.1 Materiais do carro
+
+Foram aplicados materiais básicos, como pintura automotiva com reflexão moderada.
+
+Faróis e janelas receberam materiais de vidro.
+
+3.2 Materiais da ponte
+
+A estrada recebeu textura de asfalto com normal map para relevo.
+
+As laterais da ponte foram configuradas com materiais de concreto.
+
+4. Iluminação e Ambiente
+4.1 Luz ambiente
+
+Foi utilizado um HDRI leve para criar iluminação natural e reflexos realistas.
+
+Ajustou-se a intensidade do HDRI para evitar estourar o brilho da pintura do carro.
+
+4.2 Luz adicional
+
+Uma luz sol (Sun Lamp) foi adicionada para reforçar sombras e dar direção à iluminação.
+
+5. Animação
+5.1 Definição da trajetória
+
+Foi criada uma curva (Path) reta para guiar o movimento do carro.
+
+O carro foi associado à curva usando o modificador Follow Path.
+
+5.2 Controle da velocidade
+
+A animação foi configurada para que o carro se deslocasse do início ao fim da ponte de forma constante ao longo de um tempo pré-definido (por exemplo, 5 segundos ou 120 frames).
+
+O eixo de rotação das rodas foi ajustado para sincronizar o giro com a velocidade linear do carro (opcional).
+
+5.3 Ajustes finais de animação
+
+Suavização (Interpolation Mode → Linear) foi aplicada ao movimento para garantir que a velocidade permanecesse constante.
+
+Verificou-se se o carro mantinha alinhamento com a pista durante todo o percurso.
+
+6. Câmeras e Enquadramento
+6.1 Configuração da câmera
+
+A câmera foi posicionada acompanhando a ponte em vista lateral, frontal ou com movimento suave de acompanhamento (opcional).
+
+Foram testados diferentes ângulos para determinar o enquadramento mais expressivo.
+
+7. Renderização
+7.1 Configurações de render
+
+O motor evee foi utilizado para obter maior realismo.
+
+Resolução padrão de 1080p a 24 fps.
+
+Amostras reduzidas na prévia e aumentadas no render final para equilíbrio entre tempo e qualidade.
+
+7.2 Render final
+
+Os quadros foram renderizados e posteriormente compilados em vídeo dentro do Blender através do Video Sequencer ou software externo.
+
+8. Conclusão
+
+A criação da animação de um carro andando em linha reta sobre uma ponte no Blender demonstrou um fluxo de trabalho eficiente envolvendo organização da cena, aplicação de materiais, configuração de iluminação e uso de curvas para animação. O processo permitiu consolidar conhecimentos fundamentais de animação 3D, como uso de paths, controle de câmeras e renderização. O resultado final foi uma animação simples, porém visualmente coerente e satisfatória.
